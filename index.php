@@ -16,7 +16,7 @@
 
 </head>
 
-<body>
+<body onload="init()">
         <nav>
 	        <ul>
 
@@ -315,7 +315,16 @@
 		</div>
 		<div class="container">
 	     	<div class="split-left">
-	     	    <form name="form" method="post" action="email.php" id="form">
+	     	<?php 
+                    if($_GET['mailSent'] == "success") { 
+                         $formVisibility = "hidden";
+                        echo '<div class="mailsent text">Thank you for your message, I will reply to you as soon as I can!</div>';
+                     } else { 
+                        $formVisibility = "visible";
+                        echo $_GET['mailSent'];
+                    }
+                ?>
+	     	    <form name="form" method="post" action="email.php" id="form" class=<?php echo "$formVisibility"; ?> >
 					<label id="commentNamePrompt">Name:</label>
 					<input type="text" id="name" name="name" onblur="validateName()">
 
