@@ -3,7 +3,7 @@
 $mailSuccess = false;
 $mailFailed = null;
 $mailMessage = null;
-$redirect   = "http://www.alexlagendijk.com/index.php";
+$redirect   = "http://www.silkynanda.eu/index.php";
 ​
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     function sendMail()
