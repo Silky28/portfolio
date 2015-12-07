@@ -1,7 +1,7 @@
 // Name Validations
 function validateName()
 	{
-	   var name = document.getElementById("commentName").value;
+	   var name = document.getElementById("name").value;
 
 	   if(name.length == 0)
 	   {
@@ -21,14 +21,14 @@ function validateName()
 
 function validatePhone()
 	{ 
-     var phone = document.getElementById("commentPhone").value;
-      if(phone.length == 0)
+     var tel = document.getElementById("tel").value;
+      if(tel.length == 0)
 	   {
       producePrompt("* Phone Number is required","commentPhonePrompt", "red");
       return false;
       
 	   }
-	   if(!phone.match(/^[0-9]{10}$/))
+	   if(!tel.match(/^[0-9]{10}$/))
 	   {
         producePrompt("* Enter Valid PhoneNumber", "commentPhonePrompt", "yellow");
 	    return false;
@@ -43,7 +43,7 @@ function validatePhone()
 
 function validateEmail()
 	{ 
-     var email = document.getElementById("commentEmail").value;
+     var email = document.getElementById("email").value;
       if(email.length == 0)
 	   {
        producePrompt("* Email is required","commentEmailPrompt", "red");
