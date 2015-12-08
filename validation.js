@@ -71,13 +71,7 @@ function validateSubject()
 	      producePrompt("*Subject is required","commentSubjectPrompt", "red");
 	      return false;
 	   }
-	   else if(!subject.match(/^[A-Za-z]*\s{1}[A-Za-z]*$/))
-	   {
-         producePrompt("*Proper Subject Please", "commentSubjectPrompt", "yellow");
-	     return false;
-	   }
-
-	   producePrompt("Valid Subject"  + "commentSubjectPrompt", "white");
+	   producePrompt("Valid Subject" , "commentSubjectPrompt", "white");
 	     return true;
 	  }
 // Message Validations
@@ -102,8 +96,8 @@ function validateCommentForm()
     if(!validateName() || !validatePhone() || !validateEmail() || !validateMessage())
     {
     	jsShow("commentPrompt");
-    	producePrompt("Form must be Valid to Submit", "commentPrompt", "red");
-    	setTimeout(function(){jsHide("commentPrompt");}, 5000);
+    	producePrompt("Form not valid", "commentPrompt", "red");
+    	setTimeout(function(){jsHide("commentPrompt");}, 15000);
     }
 }
 function jsShow(id)
