@@ -12,14 +12,10 @@
 	<link rel="stylesheet" href="css/normalize.css" type="text/css" />
 	<link rel="stylesheet" href="css/style.css" type="text/css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-
-
 </head>
-
-<body onload="init()">
+<body>
         <nav>
 	        <ul>
-
 				<li id="nav-home"><a href="#home"><img src="img/homes.png" class="homeimg"></a></li>
 				<li id="nav-skills"><a href="#skills">Skills</a></li>
 				<li id="nav-portfolio"><a href="#portfolio">Portfolio</a></li>
@@ -28,7 +24,6 @@
 				<li id="nav-contact"><a href="#contact">Contact</a></li>
 			</ul>	
         </nav>
-	
 	<!-- home section -->
 		<section id="home">
 			<div class="container">
@@ -45,10 +40,8 @@
 					<img src="img/about.png" title="SilkyNanda" alt="Profile Picture">
                 </div>
             </div> 
-		</section>
-	
-	<!-- skills -->
-	
+		</section>	
+	<!-- skills -->	
 	<section id="skills">
         <div class="container">
 				<h2>Skills</h2>
@@ -65,8 +58,7 @@
 					<p>Constantly learning is one of the basic things with creative design and front-end development. When you stop learning you stop moving forward in this world, so that's what I do.</p>
 					<p> Learning from others and reading articles and about new techniques on the internet is the best way to keep yourself up to date. Always trying to improve my existing coding skills and to learn new by following tutorials on websites.</p>
 
-				</div>
-        
+				</div>   
             <div class="split-left">
 			    <div class="meter">
 			        <p>C#</p>
@@ -81,7 +73,6 @@
 			        <span style="width: 60%"></span>
 			    </div>
 		    </div>
-
             <div class="split-right">
 				<div class="meter">
 				    <p>HTML(5)</p>
@@ -96,12 +87,9 @@
 			        <span style="width: 30%"></span>
 			    </div>
 			</div>	
-		</div>
-				
+		</div>			
 	</section>
-	
-	<!-- Portfolio -->
-	
+	<!-- Portfolio -->	
 	<section id="portfolio">
 		<div class="container">
 				<h2>Portfolio</h2>
@@ -111,7 +99,6 @@
 		        <div class="line"></div>
 			</div>
 		</div>	
-
 	    <div class="container">	
 	        <div class="port1">
 	        	<div class="port-text">
@@ -160,12 +147,9 @@
                 </ul>
 		    </div>
 		</div>
-	</section> 
-	
+	</section> 	
 	<!-- Education-->
-
 	<section id="education">
-	
 	    <div class="container">
 			    <h2>Education &amp; Experience</h2>
 		    <div class="headerabout">
@@ -174,7 +158,6 @@
 		        <div class="line"></div>
 	    	</div>
 		</div>	
-
         <div class="container">
 			<div class="edu-text1">
                     <p>October 2015 - Present</p>
@@ -189,7 +172,6 @@
 					exchange students that are applying for courses at The Hague University.</p>
 			</div>
 		</div>
-
 		<div class="container">
             <div class="edu-text3">
 					<p class="edu-span1">Ask Roger</p>
@@ -203,7 +185,6 @@
                     <p>July 2015- September 2015</p>
 			</div>
 		</div>
-
         <div class="container">
 			<div class="edu-text5">
                     <p>July 2012-December 2014</p>
@@ -220,7 +201,6 @@
 					<p> ArcGIS 3.2 Software and DRASTIC Vulnerability Assessment Model.DRASTIC Model used for assessing the groundwater vulnerability is based on various parameters. </p>
 			</div>
 		</div>
-
         <div class="container">
             <div class="edu-text7">
 					<p class="edu-span1">Education 2 - CT Institute Of Technology,Punjab,India</p>
@@ -237,7 +217,6 @@
                     <p>August 2008- May 2012</p>
 			</div>
 		</div>
-
 		<div class="container">
 			<div class="edu-text9">
                     <p>Year 1994 - Year 2008</p>
@@ -254,11 +233,8 @@
 			</div>
 		</div>
     </section>
-
 	<!-- Achievements-->
-
-	<section id="achievements">
-		
+	<section id="achievements">	
 		<div class="container">
 			    <h2>Publications &amp; Achievements</h2>
 		    <div class="headerabout">
@@ -301,7 +277,6 @@
 			</div>
 		</div>
 	</section>
-	
     <section id="contact">
         <div class="container">
 			    <h2>Contact</h2>
@@ -315,28 +290,17 @@
 		</div>
 		<div class="container">
 	     	<div class="split-left">
-	     	<?php 
-                    if($_GET['mailSent'] == "success") { 
-                         $formVisibility = "hidden";
-                        echo '<div class="mailsent text">Thank you for your message, I will reply to you as soon as I can!</div>';
-                     } else { 
-                        $formVisibility = "visible";
-                        echo $_GET['mailSent'];
-                    }
-                ?>
-	     	    <form name="form" method="post" action="email.php" id="form" class=<?php echo "$formVisibility"; ?> >
+	     	    <form name="form" method="post" action="email.php">
 					<label id="commentNamePrompt">Name:</label>
 					<input type="text" id="name" name="name" onblur="validateName()">
-
 					<label id="commentPhonePrompt">Phone</label>
-					<input type="text" id="tel" name="tel" onblur="validatePhone()">
-
+					<input type="text" id="phone" name="phone" onblur="validatePhone()">
 					<label id="commentEmailPrompt">E-mail:</label>
 					<input type="text" id="email" name="email" onblur="validateEmail()">
-
+					<label>Subject:</label>
+					<input type="text" id="subject" name="subject">
 					<label id="commentMessagePrompt">Message</label>
 					<textarea id="message" name="message" onblur="validateMessage()"></textarea>
-
                     <label id="commentPrompt"></label>
 					<button id="submit" type="submit" value="submit" onclick="validateCommentForm()">Submit</button>
 				</form>
@@ -350,6 +314,7 @@
 				<a href="https://www.facebook.com/silky28puri" target="_blank"><i class="fa fa-facebook"></i> Facebook</a>
 				</div>
 			</div>
+        </form>
 		</div>
 	</section>	
 	<script type="text/javascript" src="animation.js"></script>

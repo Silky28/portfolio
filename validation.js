@@ -21,14 +21,14 @@ function validateName()
 
 function validatePhone()
 	{ 
-     var tel = document.getElementById("tel").value;
-      if(tel.length == 0)
+     var phone = document.getElementById("phone").value;
+      if(phone.length == 0)
 	   {
       producePrompt("* Phone Number is required","commentPhonePrompt", "red");
       return false;
       
 	   }
-	   if(!tel.match(/^[0-9]{10}$/))
+	   if(!phone.match(/^[0-9]{10}$/))
 	   {
         producePrompt("* Enter Valid PhoneNumber", "commentPhonePrompt", "yellow");
 	    return false;
@@ -65,7 +65,7 @@ function validateEmail()
 function validateMessage()
 	{ 
      var message = document.getElementById("message").value;
-     var required = 30;
+     var required = 10;
      var left = required - message.length;
       if(left > 0)
 	   {
