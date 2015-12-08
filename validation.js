@@ -61,6 +61,25 @@ function validateEmail()
 	   return true;
 	   
 	}
+//Subject Validations
+function validateSubject()
+	{
+	   var subject = document.getElementById("subject").value;
+
+	   if(subject.length == 0)
+	   {
+	      producePrompt("*Subject is required","commentSubjectPrompt", "red");
+	      return false;
+	   }
+	   else if(!subject.match(/^[A-Za-z]*\s{1}[A-Za-z]*$/))
+	   {
+         producePrompt("*Proper Subject Please", "commentSubjectPrompt", "yellow");
+	     return false;
+	   }
+
+	   producePrompt("Valid Subject"  + "commentSubjectPrompt", "white");
+	     return true;
+	  }
 // Message Validations
 function validateMessage()
 	{ 
