@@ -290,6 +290,15 @@
 		</div>
 		<div class="container">
 	     	<div class="split-left">
+	     	<?php 
+	     			if (isset($_GET['mailSent'])) {
+	                    if($_GET['mailSent'] == "success") { 
+	                        echo '<div class="mailsent text">Thank you for your message, I will reply to you as soon as I can!</div>';
+	                     } else { 
+	                        echo $_GET['mailSent'];
+	                    }
+	                }
+                ?>
 	     	    <form name="form" method="post" action="email.php">
 					<label id="commentNamePrompt">Name:</label>
 					<input type="text" id="name" name="name" onblur="validateName()">

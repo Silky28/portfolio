@@ -635,6 +635,10 @@ button:hover {
 	background-color: #8c8c8c;
 	border-bottom: 4px solid #616161;
 }
+.mailsent text{
+    margin: -20px 0 0px 10px;
+    position: absolute;
+}
 #contact .split-right{
 	margin-right: 50px;
 }
