@@ -55,8 +55,7 @@
              	<div class="text">
 					<span>Constantly improving my skills is what I do</span>
 					<p>Talking about your own skills is hard, because you can find that they are good while someone else thinks you still have room for improvement.</p>
-					<p>Constantly learning is one of the basic things with creative design and front-end development. When you stop learning you stop moving forward in this world, so that's what I do.</p>
-					<p> Learning from others and reading articles and about new techniques on the internet is the best way to keep yourself up to date. Always trying to improve my existing coding skills and to learn new by following tutorials on websites.</p>
+					<p> Learning from others and reading articles and about new technologies on the internet is the best way to keep yourself up to date. Always trying to improve my existing programming skills.</p>
 
 				</div>   
             <div class="split-left">
@@ -196,7 +195,7 @@
 			<div class="edu-text6">
 					<p class="edu-span1">Education 3 - Amity University,Noida,India</p>
 					<span class="edu-span2">Masters in Information Technology</span>
-					<p>I had done my Masters in Information Technology from Amity University, Noida, India. It was for two years and it was a beautiful journey.</p> 
+					<p>I had done my Masters in Information Technology from Amity University, Noida, India. It was for two years and i worked with research projects.</p> 
 					<p>In my Masters I worked with ArcGIS Software and published some research work.</p>
 					<p> ArcGIS 3.2 Software and DRASTIC Vulnerability Assessment Model.DRASTIC Model used for assessing the groundwater vulnerability is based on various parameters. </p>
 			</div>
@@ -205,9 +204,9 @@
             <div class="edu-text7">
 					<p class="edu-span1">Education 2 - CT Institute Of Technology,Punjab,India</p>
 					<span class="edu-span2">Bachelors in Information Technology</span>
-					<p>I had done my Bachelors in Information Technology from CT Institute Of Technology,Punjab,India. It was for four years and it was a wonderful journey.</p> 
-					<p>In my Bachelors I worked with HTML,CSS,PHP and C#.  </p>
-					<p>This is an online site which is used by the university for organizing online exams. In this I had created pages which show the test details also the time for completing the tests.</p>
+					<p>I had done my Bachelors in Information Technology from CT Institute Of Technology,Punjab,India. It was for four years.</p> 
+					<p>In my Bachelors I worked with various technologies: HTML,CSS,SQL,PHP and ASP.NET.</p>
+					<p>I worked with various companies as an intern and also did some fun projects. I tried to give my best and achieved scholarships for achieving the highest credits.</p>
 			</div>
 				<div class="arrow arrow-right4">
                 </div>
@@ -290,10 +289,10 @@
 		</div>
 		<div class="container">
 	     	<div class="split-left">
-	     	<?php 
-	     			if (isset($_GET['mailSent'])) {
+                <?php 
+	     		if (isset($_GET['mailSent'])) {
 	                    if($_GET['mailSent'] == "success") { 
-	                        echo '<div class="mailsent text">Thank you for your message, I will reply to you as soon as I can!</div>';
+	                        echo '<div class="mailsent text" style="position:absolute; margin: -20px 0 0px 10px;">Thank you for your message, I will reply to you soon.</div>';
 	                     } else { 
 	                        echo $_GET['mailSent'];
 	                    }
